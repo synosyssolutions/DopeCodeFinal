@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<div class="container-fluid clubbed_screen">
+  <app-navbar></app-navbar>
+  <div>
+    <body>
+      <section class="contact_us">
+          <h1 class="title">Contact Us</h1>
+          <div class="container">
+            <form #enqForm="ngForm" (ngSubmit)="Submit(enqForm)"> 
+            <div class="contact-form row">
+                  
+                    <div class="form-field col-lg-6">
+                        <input id="name" #name1 class="input-text" type="text" name="name" required ngModel/>
+                        <label for="name" class="label">Name</label>
+                        <div *ngIf="name1.errors && (name1.dirty || name1.touched)" style="text-align:left; padding-top:5px; color:red;">
+                            <div [hidden]="!name1.errors.required">
+                                <p>Name is mandatory</p>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="form-field col-lg-6">
+                         <input id="company" #cmpName class="input-text" type="company" name="company" ngModel required/> 
+                         <label for="company" class="label">Company Name</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                         <input id="email" #email class="input-text" type="text" name="email" ngModel required />
+                         <label for="email" class="label">Email</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                         <input id="phone" #mobile class="input-text" type="text" name="phone" ngModel required />
+                         <label for="phone" class="label">Mobile</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                         <textarea class="input-text textarea" id="project_detail" #detail name ="project_detail" ngModel required></textarea>
+                         <label for="project_detail" class="label">Project Details</label>
+                    </div>
+                    <div class="form-field col-lg-6">
+                         <select class="input-text" id="budget" name="budget" #budget ngModel required>
+                            <option value="" selected disabled hidden>Choose Budget</option>
+                             <option> Less than 5k</option>
+                             <option> 5k - 10k</option>
+                             <option> Over 10k</option>
+                             <option> Please Advice</option>
+                         </select>
+                    </div>
+                    <div class="row">
+                         <div class="form-field col-lg-6">
+                             <input type="submit" class="submit-btn" value="submit"/>
+                         </div>
+                         <div class="form-field col-lg-6">
+                             <input type="reset" class="submit-btn" value="reset" (click)="enqForm.reset()"/>
+                         </div>
+                    </div>
+                  
+              </div>
+            </form>
+          </div>
+   
+      </section>
+       <!-- JavaScript Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   </body>
+  </div>
+  <app-footer></app-footer>
+</div>
+</html>

@@ -1,10 +1,19 @@
+
+
+
 .carousel-item img
 {
     height:70vh;
     width:100%
 }
 
-
+.img_customize:hover{
+    transform:scaleZ(0.5);
+}
+.cor_text{
+    margin: 0px;
+    padding:0px;
+}
 .carousel-caption
 {
    position: absolute;

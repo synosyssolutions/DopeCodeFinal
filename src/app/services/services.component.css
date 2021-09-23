@@ -1,0 +1,23 @@
+.services{
+    margin: 0px;
+    padding:0px;
+}
+
+.serviceContent{
+    padding-top:40px;
+    padding-bottom: 50px;
+}
+.services_header p{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service_provided .card {
+    margin-bottom: 40px;
+}
+
+.getting_started{
+    height:30vh;
+    width:100%;
+    background-color: aqua;
+}
