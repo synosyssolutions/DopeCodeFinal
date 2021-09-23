@@ -18,12 +18,7 @@
                   
                     <div class="form-field col-lg-6">
                         <input id="name" #name1 class="input-text" type="text" name="name" required ngModel/>
-                        <label for="name" class="label">Name</label>
-                        <div *ngIf="name1.errors && (name1.dirty || name1.touched)" style="text-align:left; padding-top:5px; color:red;">
-                            <div [hidden]="!name1.errors.required">
-                                <p>Name is mandatory</p>
-                            </div>
-                        </div>    
+                        <label for="name" class="label">Name</label>   
                     </div>
                     <div class="form-field col-lg-6">
                          <input id="company" #cmpName class="input-text" type="company" name="company" ngModel required/> 
